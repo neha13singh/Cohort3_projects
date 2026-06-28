@@ -1,4 +1,31 @@
 console.log("JS Loaded");
+
+let mode = document.querySelector("#mode");
+let body = document.body;
+let pinnedContainer = document.querySelector("#pinned-container");
+let parentContainer = document.querySelector("#parent-container");
+mode.addEventListener("click", function () {
+
+    if (body.classList.contains("white")) {
+        body.classList.remove("white");
+        body.classList.add("black");
+        body.style.backgroundColor = "black";
+        let btn=event.target;
+        btn.innerText="Light"
+        btn.style.backgroundColor="white"
+        btn.style.color="black";
+    }
+    else {
+        body.classList.remove("black");
+        body.classList.add("white");
+        body.style.backgroundColor = "pink";
+         let btn=event.target;
+        btn.innerText="Dark"
+        btn.style.backgroundColor="black"
+        btn.style.color="white";
+    }
+
+});
 let addbtn=document.querySelector('#add_task')
 let close=document.querySelector('#close')
  let form=document.querySelector('#form')
@@ -58,6 +85,9 @@ del.classList.add("delete_btn");
 
 let done = document.createElement("button");
 done.classList.add("done_btn");
+let pin = document.createElement("button");
+pin.classList.add("pin_btn");
+pin.dataset.pin = "Pin";
 
 // NEW: Button container
 let buttonContainer = document.createElement("div");
@@ -72,11 +102,13 @@ status.innerText = `Status:Pending`;
 edit.innerText = "Edit";
 done.innerText = "Done";
 del.innerText = "Delete";
+pin.innerText="Pin";
 
 // adding buttons inside button container
 buttonContainer.appendChild(edit);
 buttonContainer.appendChild(done);
 buttonContainer.appendChild(del);
+buttonContainer.appendChild(pin);
 
 // adding these components inside card
 card.appendChild(heading);
@@ -87,6 +119,8 @@ card.appendChild(buttonContainer);
 
 // now add this card component inside main page div name task-container
 card.setAttribute("data-id",count++);
+card.dataset.category=taskcategory.value;
+card.dataset.status="Pending";
 task_container.appendChild(card);
 // Clear the form fields
 taskinput.value = "";
@@ -94,14 +128,12 @@ taskcategory.selectedIndex = 0;   // Selects the first option ("Select")
 });
 
 
-
-
 //edit functionality
 let task_container = document.querySelector("#task-container");
-task_container.addEventListener("click",function(event){
+parentContainer.addEventListener("click", function(event){
     console.log("inside ")
 if(event.target.classList.contains("edit_btn")){
-    let card=event.target.parentElement.parentElement;
+    let card=event.target.closest(".card");
     let title=card.querySelector(".title");
     let newTitle=prompt("enter new task title: ");
     if (newTitle !== null && newTitle.trim() !== "") {
@@ -111,8 +143,10 @@ if(event.target.classList.contains("edit_btn")){
 
 }
 if(event.target.classList.contains("delete_btn")){
-    let card=event.target.parentElement.parentElement;
-    
+      let card=event.target.closest(".card");
+     if (card.hasAttribute("data-id")) {
+        console.log("Card ID:", card.dataset.id);
+    }
     card.remove();
 
 }
@@ -134,5 +168,27 @@ if(event.target.classList.contains("done_btn"))
     del.disabled = true;
 
     card.classList.add("completed");
+}
+if(event.target.classList.contains("pin_btn")){
+
+    let btn = event.target;
+    let card = btn.closest(".card");
+
+    if(btn.dataset.pin === "Pin"){
+
+        pinnedContainer.prepend(card);
+
+        btn.dataset.pin = "Unpin";
+        btn.innerText = "Unpin";
+
+    }
+    else{
+
+        task_container.append(card);
+
+        btn.dataset.pin = "Pin";
+        btn.innerText = "Pin";
+
+    }
 }
 })

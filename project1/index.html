@@ -12,8 +12,17 @@
   
     <nav><h2>
         <center>Task Management APP</center>
-    </h2><button id="add_task" onClick="display_form">Add task</button></nav>
+    </h2><button id="add_task" onClick="display_form">Add task</button>
+<button id="mode" class="white">Mode</button></nav>
+<div id="parent-container">
+<h2 id="pinned-heading">📌 Pinned Tasks</h2>
+
+<div id="pinned-container"></div>
+
+<h2>All Tasks</h2>
+
       <div id="task-container"></div>
+      </div>
 <div id="form" >
  <form action="">
     <div id="top-bar">
@@ -33,7 +42,7 @@
                     <option value="" selected disabled>Select</option>
                     <option value="work">Work</option>
                     <option value="personal">Personal</option>
-                    
+
                     <option value="study">Study</option>
 
                     <option value="shopping">Shopping</option>

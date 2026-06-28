@@ -275,3 +275,57 @@ select:focus{
 
     cursor:not-allowed;
 }
+#mode{
+    background-color: black;
+    color: white;
+    width:50px;
+    height:30px;
+    cursor:pointer;
+}
+.pin_btn{
+    width:70px;
+    height:34px;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    background:#D7EAF8;
+    color:#444;
+
+    transition:0.3s;
+}
+
+.pin_btn:hover{
+    background:#C4DFF5;
+    transform:translateY(-2px);
+}
+.button-container{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.edit_btn,
+.delete_btn,
+.done_btn,
+.pin_btn{
+
+    flex:1;
+
+    height:34px;
+
+    border:none;
+    border-radius:8px;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
