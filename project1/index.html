@@ -1,0 +1,69 @@
+<!doctype html> <!--this tells the browser that this is html 5-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+    <nav><h2>
+        <center>Task Management APP</center>
+    </h2><button id="add_task" onClick="display_form">Add task</button></nav>
+      <div id="task-container"></div>
+<div id="form" >
+ <form action="">
+    <div id="top-bar">
+    <div></div>
+    <div id="close">✖</div>
+</div>
+        <table>
+            <tr>
+                 <td class="topic"><p>Enter your Task: </p></td>  
+                 <td class="values"> <input type="text" data-id="task" placeholder="Enter Your Task"></td>
+        
+            </tr>
+               <tr>
+                 <td class="topic"><p>Chose Task Category: </p></td>  
+                 <td class="values">
+                 <select data-category="category" >
+                    <option value="" selected disabled>Select</option>
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="study">Study</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="health">Health</option>
+                    <option value="others">Others</option>
+                 </select>
+                 </td>
+                 
+
+        
+            </tr>
+               <!-- <tr>
+                 <td class="topic"><p>Set Status: </p></td>  
+                 <td class="values">                    <select data-status="status">
+                        <option value="" selected disabled>Select</option>
+                        <option value="pending">Pending</option>
+                          <option value="done">Done</option>
+                    </select>
+                </td>
+        
+            </tr> -->
+         
+      
+        </table>
+        <div class="Add_button">
+        <button class="add">ADD</button>
+        </div>
+    </form>
+
+</div>
+   
+    <script src="scripts.js"></script>
+</body>
+
+</html>

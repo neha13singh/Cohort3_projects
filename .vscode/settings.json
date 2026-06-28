@@ -1,0 +1,19 @@
+{
+    "editor.inlineSuggest.showToolbar": "never",
+    "editor.inlineSuggest.suppressInSnippetMode": false,
+    "editor.inlineSuggest.edits.allowCodeShifting": "never",
+    "editor.inlineSuggest.edits.renderSideBySide": "never",
+    "editor.inlineSuggest.edits.showLongDistanceHint": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.experimental.emptyResponseInformation": false,
+    "editor.inlineSuggest.syntaxHighlightingEnabled": false,
+    "editor.inlineSuggest.triggerCommandOnProviderChange": false,
+    "editor.screenReaderAnnounceInlineSuggestion": false,
+    "terminal.integrated.suggest.inlineSuggestion": "off",
+    "intelliphp.inlineSuggestionsEnabled": false,
+    "editor.suggest.showInlineDetails": false,
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "editor.suggest.selectionMode": "never"
+}
