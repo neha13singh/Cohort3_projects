@@ -1,0 +1,101 @@
+#div2{
+    /* background-color:blue; */
+    display:grid;
+    grid-template-rows:1fr 2fr;
+}
+#div3{
+    /* background-color:red; */
+    display:grid;
+    grid-template-rows:2fr 1fr;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#div1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 80%;
+    height: 90vh;
+
+    margin: 50px auto;
+}
+#div4{
+    /* background-color:pink; */
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+#div5{
+    /* background-color:yellow; */
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+#div6{
+    /* background-color:orange; */
+    
+}
+#div7{
+    /* background-color:blanchedalmond */
+}
+#div8{
+    /* background-color:blueviolet; */
+    
+}
+#div9{
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* background-color:azure; */
+}
+#div10{
+    /* background-color:pink; */
+}
+#div11{
+    /* background-color:yellow; */
+}
+#div12{
+    /* background-color:greenyellow; */
+}
+#div14{
+    /* background-color:blue; */
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+#div13{
+    /* background-color:black; */
+}
+#div15{
+    /* background-color:green; */
+}
+#div16{
+    display:grid;
+     grid-template-rows:1fr 3fr;
+}
+#div17{
+    /* background-color:skyblue; */
+}
+#div18{
+    /* background-color:maroon; */
+}
+div > img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+div{
+    overflow:hidden;
+    gap:10px;
+}
+body{
+    background-color:black;
+    
+}
+img{
+    border-radius: 15px;
+}
+
